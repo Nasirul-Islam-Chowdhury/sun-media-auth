@@ -14,6 +14,17 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirmPassword = form.confirm_password.value;
+        if(password !== confirmPassword){
+            setError("Password didn't match")
+        };
+        if(!/[*@!#%&()^~{}]+/.test(password)){
+            setError("Please input atleast one special character");
+        }else{
+            setError("")
+        }
+        if(password.length < 6){
+            setError("Pasword should be 6 character or more")
+        }
         signUp(email, password)
         .then(result=> {
             Swal.fire("Successfully Registered")
@@ -23,6 +34,7 @@ const Register = () => {
         .catch(error=>console.log(error))
         
         }
+     
         const handleGoogleSignin = () =>{
             googleSignup()
             .then(result => {
@@ -31,19 +43,6 @@ const Register = () => {
                 navigate("/")
             })
             .catch(error =>console.log(error))
-        // if(password !== confirmPassword){
-        //     setError("Password didn't match")
-        // };
-        // if(!/[*@!#%&()^~{}]+/.test(password)){
-        //     setError("Please input atleast one special character");
-        // }else{
-        //     setError("")
-        // }
-        // if(password.length < 6){
-        //     setError("Pasword should be 6 character or more")
-        // }
-     
-
     }
 
     return (
