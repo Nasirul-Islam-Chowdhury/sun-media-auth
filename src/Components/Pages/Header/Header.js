@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaAlignJustify, FaSignOutAlt, FaSignInAlt, FaHome, FaExpandArrowsAlt } from "react-icons/fa";
+import { FaAlignJustify, FaSignOutAlt, FaSignInAlt, FaHome, FaExpandArrowsAlt , FaRegistered} from "react-icons/fa";
+import { AuthContext } from '../../Contexts/UseContexts';
 const Header = () => {
+    const {logOut} = useContext(AuthContext);
+    const handleLogout = () =>{
+        logOut()
+    }
     const [open, setOpen] = useState(false);
     return (
         <div className='bg-custom-blue flex items-center justify-between h-[70px] md:h-[113px] w-full md:px-28 px-14'>
@@ -11,15 +16,19 @@ const Header = () => {
             <ul className={`text-xl font-sans bg-gradient-to-r from-first to-second fw-[700] font-bold inline-block text-transparent bg-clip-text ml-[280px] md:flex gap-10 md:static absolute ${open? 'top-16': 'top-[-200px]'}`}>
                 <li className='flex items-center gap-1'>
                     <FaHome className='text-white' />
-                    <Link>Home</Link>
+                    <Link to={'/'}>Home</Link>
+                </li>
+                <li className='flex items-center gap-1'>
+                    <FaRegistered className='text-white' />
+                    <Link to={'/register'}>Register</Link>
                 </li>
                 <li className='flex items-center gap-1'>
                     <FaSignInAlt className='text-white' />
-                    <Link>Login</Link>
+                    <Link  to={'/login'}>Login</Link>
                 </li>
                 <li className='flex items-center gap-1'>
                     <FaSignOutAlt className='text-white' />
-                    <Link>Sign out</Link>
+                    <Link onClick={handleLogout}>Sign out</Link>
                 </li>
             </ul>
           

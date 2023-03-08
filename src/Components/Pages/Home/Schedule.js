@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaCheck } from "react-icons/fa";
 
 const Schedule = () => {
     return (
@@ -17,23 +16,23 @@ const Schedule = () => {
                 <h1 className='text-3xl font-bold font-sans mt-8'>This Audit Call is perfect for:</h1>
 
                 <div className='flex justify-center gap-2 items-center mt-6'>
-                    <FaCheck className='h-8 w-8' />
+                    <h1 className='text-3xl'>🗸</h1>
                     <p>Businesses looking to convert their current website into a high quality & streamlined funnel format.</p>
                 </div>
                 <div className='flex justify-center gap-2 items-center mt-4'>
-                    <FaCheck className='h-8 w-8' />
+                <h1 className='text-3xl'>🗸</h1>
                     <p>Businesses looking to convert their current website into a high quality & streamlined funnel format.</p>
                 </div>
-                <div className='flex justify-center gap-2 items-center mt-4'>
-                    <FaCheck className='h-8 w-8' />
+                <div className='flex justify-center gap-2 items-center mt-4 '>
+                <h1 className='text-3xl'>🗸</h1>
                     <p>Businesses looking to understand their increased revenue potential with funnels & conversion rate optimization.</p>
                 </div>
                 <div className='flex justify-center gap-2 items-center mt-4'>
-                    <FaCheck className='h-8 w-8' />
+                <h1 className='text-3xl'>🗸</h1>
                     <p>Businesses looking to maximize their conversion rates & average order value.</p>
                 </div>
                 <div className='flex justify-center gap-2 items-center mt-4'>
-                    <FaCheck className='h-8 w-8' />
+                <h1 className='text-3xl'>🗸</h1>
                     <p>Businesses looking for a reliable agency that can make their company a priority.</p>
                 </div>
 
