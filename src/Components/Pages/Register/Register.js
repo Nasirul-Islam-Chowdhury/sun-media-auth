@@ -32,11 +32,7 @@ const Register = () => {
                 navigate("/")
             })
             .catch(error => console.log(error))
-
     }
-
-
-
     return (
         <div className="bg-background min-h-screen flex flex-col">
             <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">

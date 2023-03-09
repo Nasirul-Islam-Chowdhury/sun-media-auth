@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 
 const Login = () => {
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname;
     const navigate = useNavigate()
     const {signin, googleSignup } = useContext(AuthContext);
     const handleGoogleSignin = () => {
@@ -14,7 +14,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 Swal.fire("Successfully Logged in")
-                navigate("/")
+                navigate(from, {replace: true})
             })
             .catch(error => console.log(error))
     }
@@ -23,13 +23,13 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-  
+  console.log('fgdgdfg')
         signin(email, password)
         .then(res=>{
             console.log(res.user)
             form.reset();
             Swal.fire("Successfully Logged In")
-            navigate(from, {replace: true})
+            navigate(from, {replace: true});
         }
         )
         .catch(error=>console.log(error))
