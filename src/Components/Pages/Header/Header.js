@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaAlignJustify, FaSignOutAlt, FaSignInAlt, FaHome, FaExpandArrowsAlt, FaRegistered } from "react-icons/fa";
+import {FaChild, FaAlignJustify, FaSignOutAlt, FaSignInAlt, FaHome, FaExpandArrowsAlt, FaRegistered } from "react-icons/fa";
 import { AuthContext } from '../../Contexts/UseContexts';
 const Header = () => {
     const { logOut, user } = useContext(AuthContext);
@@ -19,12 +19,16 @@ const Header = () => {
                     <Link to={'/'}>Home</Link>
                 </li>
                 <li className='flex items-center gap-1'>
+                    <FaChild className='text-white' />
+                    <Link to={'/admin'}>Admin</Link>
+                </li>
+                <li className='flex items-center gap-1'>
                     <FaRegistered className='text-white' />
                     <Link to={'/register'}>Register</Link>
                 </li>
                 {user?.uid ? <li className='flex items-center gap-1'>
                     <FaSignOutAlt className='text-white' />
-                    <Link onClick={handleLogout}>Sign out</Link>
+                    <Link to='/' onClick={handleLogout}>Sign out</Link>
                 </li> :
                  <li className='flex items-center gap-1'>
                     <FaSignInAlt className='text-white' />

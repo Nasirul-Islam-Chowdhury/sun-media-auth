@@ -16,7 +16,7 @@ const Home = () => {
                 <p >Spine-Chilling ROI Via Paid Advertising</p>
                 </div>
             <Link to='/register'>
-            <button className='btn bg-red-500 w-[287px] rounded-xl p-3 text-white text-center bg-gradient-to-r from-first to-second font-bold'>Register Now!</button>
+            <button className='btn w-[287px] rounded-xl p-3 text-white text-center bg-gradient-to-r from-first to-second font-bold'>Register Now!</button>
             </Link>
             </div>
             <div>
