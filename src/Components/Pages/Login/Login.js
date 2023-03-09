@@ -36,7 +36,7 @@ const Login = () => {
 
     }
     return (
-        <div className="bg-grey-lighter min-h-screen flex flex-col">
+        <div className="bg-background min-h-screen flex flex-col">
         <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
             <form onSubmit={handleSignin} className="bg-gradient-to-r from-first to-second px-6 py-20 rounded shadow-md text-black w-full">
                 <h1 className="mb-8 text-3xl text-center text-white font-bold font-sans">Login</h1>
@@ -63,8 +63,8 @@ const Login = () => {
 
             </form>
 
-            <div className="text-grey-dark mt-6">
-                New Here?   <Link to='/register' className="underline border-b border-blue text-blue">
+            <div className="text-white mt-6">
+                New Here?   <Link to='/register' className="border-b border-blue text-blue">
                 Create an account
                 </Link>.
             </div>

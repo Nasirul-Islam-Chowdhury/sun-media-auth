@@ -11,7 +11,7 @@ const Schedule = () => {
                 <button className='btn bg-red-500 w-[287px] rounded-xl p-3 mt-[20px] text-white text-center bg-gradient-to-r from-first to-second md:mb-0 mb-8 font-bold'>Schedule a Call</button>
             </div>
 
-            <div className='p-[60px] bg-custom-blue md:w-1/2'>
+            <div className='md:p-[60px] p-4 bg-custom-blue md:w-1/2'>
 
                 <h1 className='text-3xl font-bold font-sans mt-8'>This Audit Call is perfect for:</h1>
 

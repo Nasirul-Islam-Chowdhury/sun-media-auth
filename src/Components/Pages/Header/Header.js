@@ -13,7 +13,7 @@ const Header = () => {
             <div>
                 <Link to={'/'} className='md:text-5xl text-3xl font-sans bg-gradient-to-r from-first to-second fw-[700] font-bold inline-block text-transparent bg-clip-text'>Sun Media</Link>
             </div>
-            <ul className={`text-xl font-sans bg-gradient-to-r from-first to-second fw-[700] font-bold inline-block text-transparent bg-clip-text ml-[280px] md:flex gap-10 md:static absolute ${open ? 'top-16' : 'top-[-200px]'}`}>
+            <ul className={`text-xl font-sans fw-[700] font-bold  text-white ml-[150px] md:flex gap-10 md:static absolute ${open ? 'top-16' : 'top-[-200px]'}`}>
                 <li className='flex items-center gap-1'>
                     <FaHome className='text-white' />
                     <Link to={'/'}>Home</Link>
